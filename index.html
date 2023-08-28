@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <button id="mostrarCitacao">Mostrar Próxima Citação</button>
+    <select id="listaAutores">
+        <option value="">Escolha um autor</option>
+        <option value="albert-einstein">Albert Einstein</option>
+        <option value="mahatma-gandhi">Mahatma Gandhi</option>
+        <option value="martin-luther-king">Martin Luther King Jr.</option>
+    </select>
+
+    <script type="module">
+        import { databaseCitacoes } from './citacoes.js';
+
+        const mostrarCitacaoButton = document.getElementById("mostrarCitacao");
+        const listaAutoresSelect = document.getElementById("listaAutores");
+
+        let citaçõesIndex = 0;
+        let citaçõesSelecionadas = [];
+
+        listaAutoresSelect.addEventListener("change", () => {
+            const autorSelecionado = listaAutoresSelect.value;
+            citaçõesSelecionadas = databaseCitacoes[autorSelecionado] || [];
+            citaçõesIndex = 0;
+        });
+
+        mostrarCitacaoButton.addEventListener("click", () => {
+            if (citaçõesSelecionadas.length > 0) {
+                if (citaçõesIndex < citaçõesSelecionadas.length) {
+                    alert(citaçõesSelecionadas[citaçõesIndex]);
+                    citaçõesIndex++;
+                } else {
+                    alert("Todas as citações deste autor foram mostradas.");
+                }
+            } else {
+                alert("Escolha um autor para exibir citações.");
+            }
+        });
+    </script>
+</body>
+</html>
