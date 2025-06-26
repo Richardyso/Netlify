@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Perfume Elegance",
+    "descricao": "Fragrância sofisticada para ocasiões especiais.",
+    "preco": "R$ 149,90"
+  },
+  {
+    "nome": "Kit Hidratante Jequiti",
+    "descricao": "Hidratação intensa com fragrância suave.",
+    "preco": "R$ 89,90"
+  },
+  {
+    "nome": "Maquiagem Completa",
+    "descricao": "Estojo com sombras, blush e batons Jequiti.",
+    "preco": "R$ 129,90"
+  }
+]
