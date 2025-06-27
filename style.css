@@ -105,3 +105,19 @@ a p:hover {
     border-radius: 10px;
     margin-left: 20px;
 }
+
+@media (max-width: 600px) {
+    .produto-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .produto-item::after {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 1; /* garante quadrado */
+    }
+}
