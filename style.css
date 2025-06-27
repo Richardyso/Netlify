@@ -63,3 +63,45 @@ a p {
 a p:hover {
     color: #3c096c;
 }
+
+.produto-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.produto-item h2 {
+    font-size: 1.5em;
+    color: #7b2cbf;
+    margin-bottom: 10px;
+}
+
+.produto-item p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #555;
+}
+
+.produto-item .preco {
+    font-weight: bold;
+    color: #5a189a;
+    margin-top: 10px;
+}
+
+/* Espaço para a imagem */
+.produto-item::after {
+    content: '';
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    background-color: #e0d4f7; /* cor suave enquanto não tiver foto */
+    border-radius: 10px;
+    margin-left: 20px;
+}

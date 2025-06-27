@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Lâmpada de emergência",
+    "descricao": "Lâmpada de emergência com bateria imbutida para falta de luz 30 LEDs",
+    "preco": "R$ 50,90"
+  },
+  {
+    "nome": "Caneta hidrográfica",
+    "descricao": "Caneta hidrográfica cor azul",
+    "preco": "R$ 1,99"
+  },
+  {
+    "nome": "Lápis",
+    "descricao": "Lápis de Grafite.",
+    "preco": "R$ 0,99"
+  }
+]

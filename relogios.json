@@ -1,17 +1,17 @@
 [
   {
     "nome": "Relógio Clássico Masculino",
-    "descricao": "Pulseira em couro e mostrador elegante.",
-    "preco": "R$ 299,90"
+    "descricao": "Confira as cores e tamanhos.",
+    "preco": "R$ 19,90"
   },
   {
-    "nome": "Relógio Digital Esportivo",
-    "descricao": "Funções cronômetro, alarme e resistente à água.",
-    "preco": "R$ 179,90"
+    "nome": "Relógio Digital",
+    "descricao": "Resistente à água.",
+    "preco": "R$ 19,90"
   },
   {
-    "nome": "Relógio Feminino Delicado",
-    "descricao": "Pulseira em aço rosé e detalhes sofisticados.",
-    "preco": "R$ 249,90"
+    "nome": "Relógio Clássico Feminino",
+    "descricao": "Confira as cores e tamanhos.",
+    "preco": "R$ 19,90"
   }
 ]

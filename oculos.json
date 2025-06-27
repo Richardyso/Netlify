@@ -2,16 +2,16 @@
   {
     "nome": "Óculos Aviador Clássico",
     "descricao": "Design atemporal e lentes com proteção UV.",
-    "preco": "R$ 199,90"
+    "preco": "R$ 19,90"
   },
   {
-    "nome": "Óculos Retrô Redondo",
+    "nome": "Óculos Da Moda",
     "descricao": "Armação metálica com estilo vintage.",
-    "preco": "R$ 249,90"
+    "preco": "R$ 19,90"
   },
   {
     "nome": "Óculos Esportivo",
     "descricao": "Leve, resistente e ideal para atividades ao ar livre.",
-    "preco": "R$ 179,90"
+    "preco": "R$ 19,90"
   }
 ]
