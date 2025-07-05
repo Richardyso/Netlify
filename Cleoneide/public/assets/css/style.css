@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcefff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px 20px;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #7b2cbf;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    margin: 10px 0 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;                 /* deixa os itens em linha */
+    flex-wrap: wrap;               /* quebra em várias linhas se necessário */
+    justify-content: center;       /* centraliza horizontalmente */
+    gap: 20px;                     /* espaçamento entre botões */
+    padding: 0;
+    margin: 30px 0;
+}
+
+ul li {
+    margin: 0;                     /* removemos o margin pois usamos gap */
+}
+
+ul li a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #9d4edd;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #7b2cbf;
+}
+
+a p {
+    color: #5a189a;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 40px;
+}
+
+a p:hover {
+    color: #3c096c;
+}
+
+.produto-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.produto-item h2 {
+    font-size: 1.5em;
+    color: #7b2cbf;
+    margin-bottom: 10px;
+}
+
+.produto-item p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #555;
+}
+
+.produto-item .preco {
+    font-weight: bold;
+    color: #5a189a;
+    margin-top: 10px;
+}
+
+/* Espaço para a imagem */
+.produto-item::after {
+    content: '';
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    background-color: #e0d4f7; /* cor suave enquanto não tiver foto */
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+    .produto-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .produto-item::after {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 1; /* garante quadrado */
+    }
+}
