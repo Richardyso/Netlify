@@ -1,3 +1,13 @@
+function normalizarTexto(texto) {
+  return texto
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+    .replace(/[^a-z0-9]/g, '_')      // Substitui caracteres especiais por underscore
+    .replace(/_+/g, '_')             // Remove underscores duplos
+    .replace(/^_|_$/g, '');          // Remove underscores no início/fim
+}
+
 async function carregarProdutos() {
   try {
     // Obter o nome do arquivo HTML atual, ex: "relogios.html"
@@ -6,19 +16,8 @@ async function carregarProdutos() {
     // Extrair a parte antes do .html, ex: "relogios"
     const nomeBase = nomeArquivo.replace('.html', '');
 
-    // Mapear nome da página para chave do JSON no Firebase
-    const mapaCategorias = {
-      "jequiti": "Jequiti",
-      "relogios": "Relógio",
-      "oculos": "Óculos",
-      "semi_joias": "Semi_joias",
-      "etc": "ETC"
-    };
-
-    const categoria = mapaCategorias[nomeBase.toLowerCase()];
-    if (!categoria) {
-      throw new Error(`Categoria não mapeada para página: ${nomeBase}`);
-    }
+    // Normalizar o nome da página para comparação
+    const nomeBaseNormalizado = normalizarTexto(nomeBase);
 
     // Buscar dados do JSON único no Firebase
     const urlFirebase = "https://cleoneide-d1b5d-default-rtdb.firebaseio.com/.json";
@@ -26,10 +25,21 @@ async function carregarProdutos() {
     if (!resposta.ok) throw new Error(`Falha ao carregar dados do Firebase: ${resposta.status}`);
     const dados = await resposta.json();
 
-    // Obter a lista de produtos da categoria
-    const produtos = dados[categoria];
-    if (!produtos || !Array.isArray(produtos)) {
-      throw new Error(`Categoria "${categoria}" não encontrada ou inválida no JSON`);
+    // Buscar a categoria correspondente (case-insensitive)
+    let categoria = null;
+    let produtos = null;
+
+    for (const [chave, valor] of Object.entries(dados)) {
+      const chaveNormalizada = normalizarTexto(chave);
+      if (chaveNormalizada === nomeBaseNormalizado) {
+        categoria = chave;
+        produtos = valor;
+        break;
+      }
+    }
+
+    if (!categoria || !produtos || !Array.isArray(produtos)) {
+      throw new Error(`Categoria não encontrada para página: ${nomeBase}`);
     }
 
     // Encontrar o container no HTML
@@ -39,14 +49,23 @@ async function carregarProdutos() {
     // Limpar o container (importante caso haja recarregamento)
     container.innerHTML = "";
 
-    // Renderizar os produtos
-    produtos.forEach(item => {
+    // Filtrar apenas produtos disponíveis e renderizar
+    const produtosDisponiveis = produtos.filter(item => item.disponivel === true);
+
+    if (produtosDisponiveis.length === 0) {
+      container.innerHTML = '<p>Nenhum produto disponível no momento.</p>';
+      return;
+    }
+
+    produtosDisponiveis.forEach(item => {
       const div = document.createElement('div');
       div.classList.add('produto-item');
       div.innerHTML = `
+        ${item.imagem ? `<img src="${item.imagem}" alt="${item.nome}" class="produto-imagem">` : ''}
         <h2>${item.nome}</h2>
         <p>${item.descricao}</p>
         <p class="preco">${item.preco}</p>
+        <p class="quantidade">Quantidade: ${item.quantidade}</p>
       `;
       container.appendChild(div);
     });
