@@ -1,0 +1,140 @@
+{
+  "produtos": {
+    "jequiti_1": {
+      "nome": "Cebolinha Desodorante Colônia 25ml",
+      "preco": "R$ 24,90",
+      "descricao": "O famoso personagem dos quadrinhos, Cebolinha, agora têm sua própria colônia! Traga ainda mais diversão para o dia a dia com a fragrância refrescante e alegre.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "jequiti_2": {
+      "nome": "Desodorante Colônia Masculina Malte Black, 75 ml",
+      "preco": "R$ 99,90",
+      "descricao": "O Desodorante Colônia Masculina Malte Black da Jequiti é a essência da elegância e da sofisticação para o homem moderno. Com uma fragrância intensa e envolvente, Malte Black mistura notas de madeira elegante que revelam uma personalidade forte e decidida. Este desodorante colônia é ideal para o homem que deseja marcar presença com um toque de mistério e poder.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "jequiti_3": {
+      "nome": "Desodorante Colônia Masculina Fábio Jr. Legacy, 100ML",
+      "preco": "R$ 129,90",
+      "descricao": "A nova fragrância que captura a essência da paixão pelo propósito. Um manifesto olfativo da jornada de sucesso do homem. As notas amadeiradas traduzem a elegância do seu ofício e são o aceno para a solidez e longevidade do seu legado, Fábio Jr. Legacy celebre sua jornada..",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "jequiti_4": {
+      "nome": "Teste",
+      "preco": "R$ 0.01",
+      "descricao": "Descrição Teste",
+      "imagem": "",
+      "disponivel": false,
+      "quantidade": 0
+    },
+    "relogio_5": {
+      "nome": "Relógio Clássico Masculino",
+      "preco": "R$ 19,90",
+      "descricao": "Confira as cores e tamanhos.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "relogio_6": {
+      "nome": "Relógio Digital",
+      "preco": "R$ 19,90",
+      "descricao": "Resistente à água.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "relógio clássico feminino_7": {
+      "nome": "NA",
+      "preco": "NA",
+      "descricao": "NA",
+      "imagem": "NA",
+      "disponivel": false,
+      "quantidade": 0
+    },
+    "relogio_8": {
+      "nome": "Relógio Clássico Feminino",
+      "preco": "R$ 19,90",
+      "descricao": "Confira as cores e tamanhos.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "semi_joias_9": {
+      "nome": "Colar Coração Cravejado",
+      "preco": "R$ 89,90",
+      "descricao": "Banhado a ouro com pedras de zircônia.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "semi_joias_10": {
+      "nome": "Brinco Argola Pequena",
+      "preco": "R$ 59,90",
+      "descricao": "Perfeito para uso diário, banhado a ouro.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "semi_joias_11": {
+      "nome": "Pulseira Feminina Fina",
+      "preco": "R$ 79,90",
+      "descricao": "Acabamento delicado para compor looks elegantes.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "oculos_12": {
+      "nome": "Óculos Aviador Clássico",
+      "preco": "R$ 19,90",
+      "descricao": "Design atemporal e lentes com proteção UV.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "oculos_13": {
+      "nome": "Óculos Da Moda",
+      "preco": "R$ 19,90",
+      "descricao": "Armação metálica com estilo vintage.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "oculos_14": {
+      "nome": "Óculos Esportivo",
+      "preco": "R$ 19,90",
+      "descricao": "Leve, resistente e ideal para atividades ao ar livre.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 1
+    },
+    "etc_15": {
+      "nome": "Lâmpada de emergência",
+      "preco": "R$ 50,90",
+      "descricao": "Lâmpada de emergência com bateria imbutida para falta de luz 30 LEDs",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 5
+    },
+    "etc_16": {
+      "nome": "Caneta hidrográfica",
+      "preco": "R$ 1,99",
+      "descricao": "Caneta hidrográfica cor azul ou preto.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 50
+    },
+    "etc_17": {
+      "nome": "Lápis",
+      "preco": "R$ 0,99",
+      "descricao": "Lápis de Grafite.",
+      "imagem": "",
+      "disponivel": true,
+      "quantidade": 50
+    }
+  }
+}
